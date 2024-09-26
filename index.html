@@ -9,14 +9,14 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: auto; /* السماح بالتمرير */
+            height: 100%; /* تعديل هذه القيمة لتغطية الشاشة بالكامل */
+            overflow: hidden;
         }
 
         /* إعدادات iframe لعرض الموقع */
         iframe {
             width: 100%;
-            height: 100%;
+            height: 100%; /* تمديد iframe لتغطية كامل الشاشة */
             border: none;
             transform: translateY(-30px); /* رفع الصفحة قليلاً لإخفاء العلامة المائية */
         }
