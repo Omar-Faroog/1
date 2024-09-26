@@ -18,21 +18,19 @@
             background-color: #28a745; /* اللون الأخضر */
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 20px;
+            padding: 10px; /* تقليل البعد العمودي */
+            font-size: 16px; /* تصغير حجم الخط */
             font-weight: bold;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000; /* لضمان أن شريط التنقل يبقى فوق كل شيء */
+            position: relative; /* وضع الشريط ليكون داخل التدفق الطبيعي */
+            z-index: 1000; /* لضمان أن شريط التنقل يبقى فوق المحتوى */
         }
 
         /* إعدادات iframe لعرض الموقع */
         iframe {
             width: 100%;
-            height: calc(100% - 60px); /* تعديل الارتفاع ليأخذ في الاعتبار شريط التنقل */
+            height: calc(100% - 40px); /* تعديل الارتفاع ليأخذ في الاعتبار شريط التنقل */
             border: none;
-            margin-top: 60px; /* ترك مساحة لشريط التنقل */
+            margin-top: 0px; /* شريط التنقل الآن فوق المحتوى */
         }
 
         /* إخفاء الزر في الأسفل */
