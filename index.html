@@ -9,16 +9,30 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%; /* تعديل هذه القيمة لتغطية الشاشة بالكامل */
+            height: 100%;
             overflow: hidden;
+        }
+
+        /* إعدادات شريط التنقل */
+        .navbar {
+            background-color: #28a745; /* اللون الأخضر */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* لضمان أن شريط التنقل يبقى فوق كل شيء */
         }
 
         /* إعدادات iframe لعرض الموقع */
         iframe {
             width: 100%;
-            height: 100%; /* تمديد iframe لتغطية كامل الشاشة */
+            height: calc(100% - 60px); /* تعديل الارتفاع ليأخذ في الاعتبار شريط التنقل */
             border: none;
-            transform: translateY(-30px); /* رفع الصفحة قليلاً لإخفاء العلامة المائية */
+            margin-top: 60px; /* ترك مساحة لشريط التنقل */
         }
 
         /* إخفاء الزر في الأسفل */
@@ -28,6 +42,11 @@
     </style>
 </head>
 <body>
+
+    <!-- شريط التنقل -->
+    <div class="navbar">
+        Devingo
+    </div>
 
     <iframe src="https://omar-faroogs-team-1.adalo.com/online-education-app?_gl=1%2Acy138b%2A_gcl_au%2ANjQxMzI5MDk3LjE3MjY0Mzc0NjAuODQ5MDEzNTcuMTcyNjQzNzg1Ni4xNzI2NDM3ODU2%2A_ga%2AMjA5NTEzODYxMi4xNzI2NDM3NDYx%2A_ga_SWT45DV35L%2AMTcyNzExNjk0Ny43LjEuMTcyNzExNjk1My41NC4wLjA.&target=atztd3wh9q45fswq5dlhxlutp&params=%7B%7D"></iframe>
 
