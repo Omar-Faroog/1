@@ -5,61 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devingo App</title>
     <style>
+        /* لجعل الصفحة تأخذ كل المساحة المتاحة */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: auto;
+            overflow: auto; /* السماح بالتمرير */
         }
 
+        /* إعدادات iframe لعرض الموقع */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
 
+        /* إخفاء الزر في الأسفل */
         .adalo-footer {
             display: none;
         }
 
-        /* الشريط العلوي */
+        /* شريط لتغطية العلامة المائية */
         .overlay {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 30px;
-            background-color: white;
+            height: 15px; /* تعديل الارتفاع حسب الحاجة لتغطية العلامة المائية */
+            background-color: white; /* لون الخلفية لتغطية العلامة */
             z-index: 9999;
-            transition: background-color 0.5s ease;
         }
     </style>
 </head>
 <body>
 
     <!-- شريط لتغطية العلامة المائية -->
-    <div class="overlay" id="topBar"></div>
+    <div class="overlay"></div>
 
     <iframe src="https://omar-faroogs-team-1.adalo.com/online-education-app?_gl=1%2Acy138b%2A_gcl_au%2ANjQxMzI5MDk3LjE3MjY0Mzc0NjAuODQ5MDEzNTcuMTcyNjQzNzg1Ni4xNzI2NDM3ODU2%2A_ga%2AMjA5NTEzODYxMi4xNzI2NDM3NDYx%2A_ga_SWT45DV35L%2AMTcyNzExNjk0Ny43LjEuMTcyNzExNjk1My41NC4wLjA.&target=atztd3wh9q45fswq5dlhxlutp&params=%7B%7D"></iframe>
-
-    <script>
-        // تغيير لون الشريط العلوي بناءً على التمرير
-        window.addEventListener( scroll , function() {
-            var topBar = document.getElementById( topBar );
-            var scrollY = window.scrollY;
-
-            // قم بتغيير اللون بناءً على الموقع
-            if (scrollY < 200) {
-                topBar.style.backgroundColor =  white ; // اللون الأول
-            } else if (scrollY >= 200 && scrollY < 400) {
-                topBar.style.backgroundColor =  lightblue ; // اللون الثاني
-            } else if (scrollY >= 400 && scrollY < 600) {
-                topBar.style.backgroundColor =  lightgreen ; // اللون الثالث
-            } else {
-                topBar.style.backgroundColor =  lightcoral ; // اللون الرابع
-            }
-        });
-    </script>
 
 </body>
 </html>
