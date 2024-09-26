@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devingo App</title>
+
+    <!-- استيراد خط Bebas Neue من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
     <style>
         /* لجعل الصفحة تأخذ كل المساحة المتاحة */
         body, html {
@@ -31,16 +37,22 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 15px; /* تعديل الارتفاع حسب الحاجة لتغطية العلامة المائية */
-            background-color: #1EFF2B; /* لون الخلفية لتغطية العلامة */
+            height: 15px; /* تعديل الارتفاع */
+            background-color: #1EFF2B; /* لون الخلفية */
             z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px; /* حجم النص */
+            font-family:  Bebas Neue , sans-serif; /* نوع الخط */
+            color: #000; /* لون النص */
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط لتغطية العلامة المائية -->
-    <div class="overlay"></div>
+    <!-- شريط لتغطية العلامة المائية مع النص -->
+    <div class="overlay">Devingo... .</div>
 
     <iframe src="https://omar-faroogs-team-1.adalo.com/online-education-app?_gl=1%2Acy138b%2A_gcl_au%2ANjQxMzI5MDk3LjE3MjY0Mzc0NjAuODQ5MDEzNTcuMTcyNjQzNzg1Ni4xNzI2NDM3ODU2%2A_ga%2AMjA5NTEzODYxMi4xNzI2NDM3NDYx%2A_ga_SWT45DV35L%2AMTcyNzExNjk0Ny43LjEuMTcyNzExNjk1My41NC4wLjA.&target=atztd3wh9q45fswq5dlhxlutp&params=%7B%7D"></iframe>
 
