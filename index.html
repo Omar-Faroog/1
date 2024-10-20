@@ -58,7 +58,7 @@
         }
 
         .progress-bar::before {
-            content:   ;
+            content: '';
             position: absolute;
             top: 50%;
             left: 5%;
@@ -192,12 +192,12 @@
 
     <script>
         function animateProgressBar() {
-            const progressBar = document.querySelector( .progress-bar );
-            progressBar.style.animation =  fillProgress 5s forwards ;
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.animation = 'fillProgress 5s forwards';
 
             // اختفاء الشريط بعد الوصول إلى 100%
             setTimeout(() => {
-                document.querySelector( .progress-container ).style.display =  none ;
+                document.querySelector('.progress-container').style.display = 'none';
             }, 5000); // 5 ثواني
         }
 
@@ -230,29 +230,29 @@
 
         function handlePageLoad() {
             clearTimeout(loadingTimeout);
-            document.getElementById( delayMessage ).style.display =  none ;
-            window.removeEventListener( offline , checkInternetConnection);
+            document.getElementById('delayMessage').style.display = 'none';
+            window.removeEventListener('offline', checkInternetConnection);
             hideLoaderElements(); // إخفاء كل شيء عند اكتمال التحميل
         }
 
         function hideLoaderElements() {
-            document.querySelector( .rings-container ).style.display =  none ;
-            document.querySelector( .loading-text ).style.display =  none ;
-            document.getElementById( delayMessage ).style.display =  none ;
+            document.querySelector('.rings-container').style.display = 'none';
+            document.querySelector('.loading-text').style.display = 'none';
+            document.getElementById('delayMessage').style.display = 'none';
         }
 
         let loadingTimeout = setTimeout(() => {
-            if (document.getElementById( myFrame ).contentWindow.document.readyState !==  complete ) {
-                document.getElementById( delayMessage ).style.display =  block ;
+            if (document.getElementById('myFrame').contentWindow.document.readyState !== 'complete') {
+                document.getElementById('delayMessage').style.display = 'block';
             }
         }, 5000); // 5 ثوانٍ
 
-        window.addEventListener( load , () => {
+        window.addEventListener('load', () => {
             checkInternetConnection();
             animateProgressBar();
         });
 
-        window.addEventListener( offline , checkInternetConnection);
+        window.addEventListener('offline', checkInternetConnection);
     </script>
 </head>
 <body>
